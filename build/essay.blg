@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is '/Users/jacobinwald/Desktop/Professional Issues/prof-issue-essay-1/build/essay.blg'
+[51] biber-darwin:340> INFO - === Fri Oct 13, 2023, 13:11:36
+[63] Biber.pm:418> INFO - Reading '/Users/jacobinwald/Desktop/Professional Issues/prof-issue-essay-1/build/essay.bcf'
+[124] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
+[133] bbl.pm:654> INFO - Writing '/Users/jacobinwald/Desktop/Professional Issues/prof-issue-essay-1/build/essay.bbl' with encoding 'UTF-8'
+[133] bbl.pm:757> INFO - Output to /Users/jacobinwald/Desktop/Professional Issues/prof-issue-essay-1/build/essay.bbl
+[134] Biber.pm:130> WARN - The file '/Users/jacobinwald/Desktop/Professional Issues/prof-issue-essay-1/build/essay.bcf' does not contain any citations!
+[134] Biber.pm:132> INFO - WARNINGS: 1
