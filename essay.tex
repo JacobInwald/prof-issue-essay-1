@@ -1,8 +1,9 @@
 \documentclass{article}
-\usepackage[backend=biber,style=numeric,autocite=plain,sorting=none]{biblatex}
+\usepackage[backend=biber,style=numeric,autocite=plain,sorting=none,maxbibnames=99]{biblatex}
 \usepackage{graphicx} % Required for including pictures
 \graphicspath{ {figures} }
 \usepackage{hyperref} % Format links for pdf
+\usepackage[none]{hyphenat}
 \addbibresource{essay.bib}
 \frenchspacing
 \usepackage{float}
@@ -11,20 +12,63 @@
 \usepackage{subcaption}
 \usepackage[margin=1in]{geometry}
 
-\title{How might your work on this project contribute to unintentional harm?}
-
-\author{Jacob Inwald}
-\date{\today}
 
 \begin{document}
-\maketitle
-
-Chosen Project: ILP Drone Project or maybe the HELIX project. 
-\begin{enumerate}
-    \item asdas 
-    \item   
-\end{enumerate}
-
-
+The system chosen for review is a drone delivery service which delivers pizza to Appleton Tower. 
+This essay accepts the definition of harm given by the ACM code of ethics - ``harm means negative consequences, especially when those consequences are significant and unjust"\supercite{ACM-ethics}. 
+This definition includes but is not limited to physical and non-physical injury, misuse of personal data, and environmental damage. 
+The system will not hold any user data - card details will not be saved to a server - so misuse of personal data is not a potential harm here.
+\newline 
+\newline 
+A clear potential for harm in the system is the possibility of physical injury, which is my responsibility as the developer to mitigate.
+This could be caused by violating no-fly zones, causing injury via disruption\supercite{guardian2018airportdrone}, or by malfunction over people\supercite{drone-harm}. 
+According to the UK Civil Aviation Authority (CAA), no-fly zones for drones limit their height to be under 120m and include any column of air above a group of people\supercite{CAA-drone-code}.  
+Therefore, as long as the drone routes over rooftops that are not populated, and flies under 120m, harm due to violating no-fly zones will be mitigated. 
+However, this raises environmental concerns.
+Mulero-Pázmány et al.\supercite{drone-wildlife-review} found that the noise of the drone harms animals as they panic and injure themselves, with the most intense reactions found in birds. 
+As the drone will now fly over rooftops to comply with no-fly zones, its noise will harm the birds roosting there. 
+To prevent harm due to noise, I should ensure that my colleagues use a ``quiet" propeller\supercite{toroidal-props} when designing the drone, however, it will not be possible to fully mitigate harm such as collisions with wildlife. 
+\newline 
+\newline 
+Additionally, there are non-physical causes of harm. 
+This system is funded by the University of Edinburgh(UoE), raising concerns over the fairness of the system. 
+According to the specification, the system only delivers to Appleton Tower\supercite{pizza-dronz-spec}.
+Appleton Tower is central to the Informatics School\supercite{Appleton-Tower-History}, meaning users will predominantly be informatics students. 
+From 2021-2022 there were a total of 49,065 students at UoE - and 2,305 were informatics students\supercite{UoE-stats}, comprising a small percentage of the student base($\sim4.7\%$). 
+This is unfair to the non-informatics students as just $\sim4.7\%$ of students will use this service, even though the tuition fees of all students fund it. 
+A valid counterargument is that there is precedent for these kinds of investments, in 2023 UoE invested over £150m in direct holdings alone\supercite{edinburgh-investments}, and these investments ultimately help the whole student base as they provide more money to UoE to be spent on the student experience. 
+However, the fact remains that this system will not be accessible by all, compounded by the risk it brings of not turning a profit, and wasting money that could otherwise be spent on directly improving student experience. 
+UoE will need to be held accountable on whether funding this system is fair or not.
+\newline 
+\newline
+Another potential for harm is the problem of automation.
+According to the Office of National Statistics, $60\%$ of delivery jobs are at risk of automation\supercite{ONS-automation}, and systems like this one are the most likely candidates to automate those jobs. 
+Patel et al. (2018) found an association between the risk of job loss due to automation and poor health, both mental and physical.\supercite{PATEL201854}
+This demonstrates that job loss due to this system will cause harm to the workers it replaces.
+Moreover, as Berkowitz (2014) points out, automation also removes the human link (the presence of humans in a decision chain) in favour of more efficient functionality\supercite{berkowitz_2014}. 
+This human link is essential to preventing the propagation of mistakes through an automated decision chain\supercite{berkowitz_2014}. 
+These mistakes are normally obvious to a human but hard for a machine to understand. 
+One such mistake could be an incorrect pizza price: a human delivery driver would understand that pizzas are not 1 pence and therefore report the error; a drone would miss this and therefore deliver the order. 
+In this case, automation would cause the restaurant harm by undercharging their customers. 
+To prevent these mistakes the system should have an administrator who ensures that the data in the system is valid. 
+Currently, the scope of the system is too small to replace jobs as the drone can only carry out 30-40 deliveries a day. 
+However, both of these problems will be important to review when scaling the system up, and UoE is responsible for ensuring these concerns are addressed. 
+\newline
+\newline
+Having discussed some potential causes for harm, the role and responsibility of the stakeholders in question need to be discussed. 
+As the developer, my role is to create and maintain the system. 
+My responsibility is to mitigate the harm which is caused directly by the system or by flaws in its functionality.
+Additionally I should bring up any concerns with management and then resolve according to advice.
+As the main stakeholders, UoE's role is to oversee the project and ensure that ethical concerns regarding the specification of the project, like the ones stated above, are addressed.
+Their responsibility is to ensure that the project is not used for any illicit purposes, or distributed unintentionally to malicious actors. 
+Both the customers and restaurants using the service are responsible for reporting bugs or problems so they can be addressed. 
+The restaurants are also responsible for ensuring their data is up-to-date and ensuring their food follows regulations.
+\newline
+\newline
+Drone delivery is still not a popular method of delivery, with the first proper drone delivery service being rolled out this year\supercite{drone-delivery-royal-mail}. 
+The emergent nature of drone use means that there has not been enough time for the associated ethical concerns to be fully examined and explored. 
+Therefore, while some of the system's potential for harm has been explored in this essay, there are still many possibilities that could not be considered. 
+Therefore, it will never be possible to assert that this system is definitively safe. 
+However, if the recommended precautions are undertaken, this potential for harm will be reduced as much as possible, reducing the likelihood of unintentional harm. 
 \printbibliography
 \end{document}
